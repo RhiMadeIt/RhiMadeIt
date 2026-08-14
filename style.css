@@ -1,0 +1,637 @@
+/* =========================================
+   RHIMADEIT
+   Main Stylesheet
+   ========================================= */
+
+
+/* =========================================
+   COLOR PALETTE
+   ========================================= */
+
+:root {
+
+    --cream: #f8f3ed;
+
+    --warm-white: #fffdf9;
+
+    --beige: #ded1c1;
+
+    --taupe: #a89582;
+
+    --sage: #9da48f;
+
+    --dusty-rose: #c79589;
+
+    --rose-dark: #9f6f66;
+
+    --brown: #5d5048;
+
+    --dark: #3f3834;
+
+}
+
+
+/* =========================================
+   GENERAL RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+
+    color: var(--dark);
+
+    background-color: var(--warm-white);
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================
+   TYPOGRAPHY
+   ========================================= */
+
+h1,
+h2,
+h3 {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-weight: 600;
+
+}
+
+
+h1 {
+
+    font-size: clamp(4rem, 10vw, 8rem);
+
+    line-height: 1;
+
+}
+
+
+h2 {
+
+    font-size: clamp(2.5rem, 5vw, 4rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+p {
+
+    font-size: 1rem;
+
+}
+
+
+.eyebrow {
+
+    font-size: 0.8rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.25em;
+
+    color: var(--rose-dark);
+
+    font-weight: 600;
+
+    margin-bottom: 1rem;
+
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.site-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 1.2rem 6%;
+
+    background-color: rgba(255, 253, 249, 0.95);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid var(--beige);
+
+}
+
+
+.logo {
+
+    font-family: 'Parisienne', cursive;
+
+    font-size: 2.5rem;
+
+    color: var(--rose-dark);
+
+}
+
+
+.navigation {
+
+    display: flex;
+
+    gap: 2rem;
+
+}
+
+
+.navigation a {
+
+    text-decoration: none;
+
+    color: var(--dark);
+
+    font-size: 0.8rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.12em;
+
+    transition: color 0.3s ease;
+
+}
+
+
+.navigation a:hover {
+
+    color: var(--dusty-rose);
+
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+
+    min-height: 85vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 6rem 8%;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(248,243,237,0.96) 0%,
+            rgba(248,243,237,0.78) 45%,
+            rgba(248,243,237,0.20) 100%
+        ),
+
+        url("images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.hero-content {
+
+    max-width: 650px;
+
+}
+
+
+.hero h1 {
+
+    color: var(--brown);
+
+    font-family: 'Parisienne', cursive;
+
+    font-weight: 400;
+
+}
+
+
+.hero h2 {
+
+    color: var(--dark);
+
+}
+
+
+.hero p:not(.eyebrow) {
+
+    max-width: 500px;
+
+    margin-bottom: 2rem;
+
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.button {
+
+    display: inline-block;
+
+    padding: 0.9rem 2rem;
+
+    background-color: var(--dusty-rose);
+
+    color: white;
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.15em;
+
+    border-radius: 50px;
+
+    transition:
+
+        background-color 0.3s ease,
+
+        transform 0.3s ease;
+
+}
+
+
+.button:hover {
+
+    background-color: var(--rose-dark);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================================
+   SECTIONS
+   ========================================= */
+
+.section {
+
+    padding: 7rem 8%;
+
+}
+
+
+.section-heading {
+
+    max-width: 700px;
+
+    margin: 0 auto 4rem;
+
+    text-align: center;
+
+}
+
+
+/* =========================================
+   ABOUT
+   ========================================= */
+
+.about {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 6rem;
+
+    align-items: center;
+
+    background-color: var(--warm-white);
+
+}
+
+
+.section-image img {
+
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border-radius: 150px 150px 20px 20px;
+
+}
+
+
+.section-content {
+
+    max-width: 600px;
+
+}
+
+
+.section-content p {
+
+    margin-bottom: 1.2rem;
+
+}
+
+
+/* =========================================
+   PORTFOLIO
+   ========================================= */
+
+.portfolio {
+
+    background-color: var(--cream);
+
+}
+
+
+.portfolio-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1.5rem;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+
+.portfolio-item {
+
+    overflow: hidden;
+
+    background-color: var(--beige);
+
+}
+
+
+.portfolio-item img {
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+
+}
+
+
+.portfolio-item:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+/* =========================================
+   SHOP
+   ========================================= */
+
+.shop {
+
+    text-align: center;
+
+    background-color: var(--sage);
+
+    color: var(--dark);
+
+}
+
+
+.shop-content {
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+
+.shop .eyebrow {
+
+    color: var(--brown);
+
+}
+
+
+.shop .button {
+
+    margin-top: 1rem;
+
+}
+
+
+/* =========================================
+   CONTACT
+   ========================================= */
+
+.contact {
+
+    text-align: center;
+
+    background-color: var(--warm-white);
+
+}
+
+
+.social-icons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 1.5rem;
+
+    margin-top: 2rem;
+
+}
+
+
+.social-icons a {
+
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: var(--cream);
+
+    color: var(--brown);
+
+    text-decoration: none;
+
+    font-size: 1.5rem;
+
+    transition:
+
+        background-color 0.3s ease,
+
+        color 0.3s ease,
+
+        transform 0.3s ease;
+
+}
+
+
+.social-icons a:hover {
+
+    background-color: var(--dusty-rose);
+
+    color: white;
+
+    transform: translateY(-5px);
+
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 2rem;
+
+    background-color: var(--brown);
+
+    color: var(--cream);
+
+}
+
+
+footer p {
+
+    font-size: 0.8rem;
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .site-header {
+
+        flex-direction: column;
+
+        gap: 0.75rem;
+
+        padding: 1rem;
+
+    }
+
+
+    .navigation {
+
+        gap: 1rem;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+
+    .navigation a {
+
+        font-size: 0.7rem;
+
+    }
+
+
+    .hero {
+
+        min-height: 75vh;
+
+        padding: 5rem 7%;
+
+        background-position: 65% center;
+
+    }
+
+
+    .about {
+
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+
+    }
+
+
+    .portfolio-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .section {
+
+        padding: 5rem 7%;
+
+    }
+
+
+    h1 {
+
+        font-size: 5rem;
+
+    }
+
+}
